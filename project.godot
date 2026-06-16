@@ -1,0 +1,8 @@
+[application]
+
+config/name="100-members-no-contact"
+config/icon="res://icon.svg"
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
