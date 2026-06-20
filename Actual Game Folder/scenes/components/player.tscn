@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e1d03bbv2uh"]
 
 [ext_resource type="Script" uid="uid://bn5pltvin1n7e" path="res://Actual Game Folder/scripts/player.gd" id="1_7buym"]
-[ext_resource type="Texture2D" uid="uid://hs2box2ysjnk" path="res://Miscellanious Assets Dump/Image/Blade1.png" id="2_kmxop"]
+[ext_resource type="Texture2D" uid="uid://hs2box2ysjnk" path="res://Miscellanious Assets Dump/Image/beyblades/pixelart/Blade1.png" id="2_kmxop"]
 [ext_resource type="AudioStream" uid="uid://c055dhcymjmqp" path="res://Miscellanious Assets Dump/Audio/ripcord.mp3" id="3_kmxop"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7buym"]
@@ -14,6 +14,7 @@ radius = 84.0
 mass = 0.5
 physics_material_override = SubResource("PhysicsMaterial_7buym")
 gravity_scale = 0.0
+contact_monitor = true
 script = ExtResource("1_7buym")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048784928]
@@ -38,3 +39,5 @@ offset_right = 216.0
 offset_bottom = 36.0
 value = 100.0
 show_percentage = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
