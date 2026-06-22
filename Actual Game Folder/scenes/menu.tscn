@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" uid="uid://cifjv677mnvrn" path="res://Actual Game Folder/scripts/button/let_it_rip.gd" id="1_jgfn2"]
 [ext_resource type="Texture2D" uid="uid://bwucxqtoakuy6" path="res://Miscellanious Assets Dump/Image/backgrounds/background_blue_distortion_640x320.png" id="1_pvo6j"]
+[ext_resource type="Texture2D" uid="uid://c8fbn6bse20yh" path="res://Miscellanious Assets Dump/Image/Title Menu/TITLE SCREEN.png" id="2_o0cgn"]
 [ext_resource type="Script" uid="uid://dq6eoqewgcgj3" path="res://Actual Game Folder/scripts/button/exit.gd" id="3_nccfl"]
+[ext_resource type="Texture2D" uid="uid://diw0wk2enrx1v" path="res://Miscellanious Assets Dump/Image/Title Menu/MENU.png" id="3_vnj0c"]
+[ext_resource type="AudioStream" uid="uid://bnss0855gpofg" path="res://Miscellanious Assets Dump/Audio/music/beyblades-battle.mp3" id="6_vnj0c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08yys"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnj0c"]
+bg_color = Color(0.74509805, 0.78431374, 0.90588236, 0.5529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdn6d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkt1e"]
+bg_color = Color(0.74509805, 0.78431374, 0.90588236, 0.5529412)
 
 [node name="Menu" type="Control" unique_id=1552408488]
 layout_mode = 3
@@ -19,27 +34,56 @@ offset_bottom = 360.0
 scale = Vector2(1.7996016, 1.7983135)
 texture = ExtResource("1_pvo6j")
 
+[node name="TitleScreen" type="Sprite2D" parent="TextureRect" unique_id=189687461]
+position = Vector2(193.37616, 111.77141)
+scale = Vector2(0.33427542, 0.33313107)
+texture = ExtResource("2_o0cgn")
+
+[node name="Menu" type="Sprite2D" parent="TextureRect" unique_id=417300304]
+position = Vector2(146.69916, 244.67368)
+scale = Vector2(0.19448751, 0.19462681)
+texture = ExtResource("3_vnj0c")
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1381603728]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = 115.0
+offset_top = 403.0
+offset_right = 230.0
+offset_bottom = 433.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1933326806]
+custom_minimum_size = Vector2(2.85, 0)
 layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1327532968]
+[node name="LET IT RIP" type="Button" parent="CenterContainer/VBoxContainer" unique_id=876020753]
+custom_minimum_size = Vector2(115, 30)
 layout_mode = 2
-text = "BEYBLADE!!"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1341774072]
-layout_mode = 2
-
-[node name="LET IT RIP" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=876020753]
-layout_mode = 2
-text = "LET IT RIP!"
+theme_override_styles/normal = SubResource("StyleBoxFlat_08yys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vnj0c")
 script = ExtResource("1_jgfn2")
 
-[node name="EXIT" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1017300428]
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=204183608]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 483.0
+offset_right = 175.0
+offset_bottom = 513.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2" unique_id=1508295518]
 layout_mode = 2
-text = "EXIT"
+
+[node name="EXIT" type="Button" parent="CenterContainer2/VBoxContainer" unique_id=1017300428]
+clip_contents = true
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tdn6d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bkt1e")
 script = ExtResource("3_nccfl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1520734144]
+position = Vector2(525, 384)
+stream = ExtResource("6_vnj0c")
+autoplay = true
+parameters/looping = true

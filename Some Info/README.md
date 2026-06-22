@@ -8,6 +8,7 @@ We're making a Beyblade roguelike/metroidvania deckbuilder RPG (Or Beyblade buil
 ## Custom Assets
 
 * add files/credits here for assets you created in this project
+* Title screen by bloop8556
 
 ## External Assets
 * add files/credits here for assets you downloaded and have rights to use (if you don't have the rights, don't use it)
@@ -20,3 +21,7 @@ We're making a Beyblade roguelike/metroidvania deckbuilder RPG (Or Beyblade buil
 * ripcord sfx
     * https://wavstock.com/sound/25072/
     * Royalty-Free License
+	
+* logo beyblade and meteor
+	* https://www.pngmart.com
+	* https://clipground.com

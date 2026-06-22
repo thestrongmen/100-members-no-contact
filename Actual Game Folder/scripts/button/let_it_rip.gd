@@ -2,4 +2,5 @@ extends Button
 
 func _input(event) -> void:
 	if button_pressed:
+		await get_tree().create_timer(1).timeout
 		SceneManager.change_screen(SceneManager.SceneKey.GAMEPLAY)
