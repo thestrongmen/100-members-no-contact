@@ -21,6 +21,9 @@ We're making a Beyblade roguelike/metroidvania deckbuilder RPG (Or Beyblade buil
 * ripcord sfx
     * https://wavstock.com/sound/25072/
     * Royalty-Free License
+
+* Menu sfx
+	* https://pixabay.com/
 	
 * logo beyblade and meteor
 	* https://www.pngmart.com

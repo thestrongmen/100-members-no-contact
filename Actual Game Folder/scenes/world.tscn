@@ -7,3 +7,5 @@
 script = ExtResource("1_ne8rj")
 
 [node name="Menu" parent="." unique_id=1552408488 instance=ExtResource("2_qhasu")]
+
+[connection signal="mouse_entered" from="Menu" to="." method="_on_menu_mouse_entered"]
